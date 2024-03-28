@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2019"],
+    "module": "commonjs",
+    "moduleResolution": "Node",
+    "rootDir": "./lib",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["lib/*"]
+    },
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "emitBOM": true,
+    "newLine": "crlf",
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "alwaysStrict": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "useUnknownInCatchVariables": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true
+  },
+  "include": ["./lib/**/*.ts"]
+}

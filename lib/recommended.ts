@@ -1,0 +1,62 @@
+import eslint from "@eslint/js";
+import {mergeDeepRight} from "ramda";
+import {configs, type ConfigWithExtends} from "typescript-eslint";
+import pluginPrettier from "eslint-plugin-prettier";
+import pluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+
+export const plugins: ConfigWithExtends["plugins"] = {
+  prettier: pluginPrettier,
+};
+
+export const rules: ConfigWithExtends["rules"] = {
+  ...eslint.configs.recommended.rules,
+  ...configs.eslintRecommended.rules,
+  ...configs.strict.reduce(mergeDeepRight).rules,
+  "array-callback-return": "error",
+  "no-await-in-loop": "error",
+  "no-constructor-return": "error",
+  "no-new-native-nonconstructor": "error",
+  "no-promise-executor-return": "error",
+  "no-self-compare": "error",
+  "no-unreachable-loop": "error",
+  "no-unused-private-class-members": "error",
+  "require-atomic-updates": "error",
+  "block-scoped-var": "error",
+  complexity: ["error", 10],
+  "func-name-matching": "error",
+  "guard-for-in": "error",
+  "max-classes-per-file": ["error", 1],
+  "max-nested-callbacks": ["error", 3],
+  "new-cap": "error",
+  "no-console": "error",
+  "no-else-return": "error",
+  "no-labels": "error",
+  "no-lonely-if": "error",
+  "no-new": "error",
+  "no-new-func": "error",
+  "no-new-wrappers": "error",
+  "no-object-constructor": "error",
+  "no-param-reassign": "error",
+  "no-proto": "error",
+  "no-return-assign": "error",
+  "no-sequences": "error",
+  "no-undef-init": "error",
+  "no-undefined": "error",
+  "no-useless-computed-key": "error",
+  "no-useless-concat": "error",
+  "no-useless-rename": "error",
+  "no-useless-return": "error",
+  "no-var": "error",
+  "prefer-arrow-callback": "error",
+  "prefer-const": "error",
+  "prefer-exponentiation-operator": "error",
+  "prefer-numeric-literals": "error",
+  "prefer-object-has-own": "error",
+  "prefer-object-spread": "error",
+  "prefer-promise-reject-errors": "error",
+  "prefer-regex-literals": "error",
+  "prefer-rest-params": "error",
+  "prefer-spread": "error",
+  radix: "error",
+  ...pluginPrettierRecommended.rules,
+};
