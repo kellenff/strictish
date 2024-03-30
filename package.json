@@ -12,7 +12,6 @@
   "scripts": {
     "tchk": "tsc --noEmit",
     "build": "tsup",
-    "prepublish": "yarn build",
     "lint": "yarn build && eslint lib .prettierrc.js eslint.config.js",
     "fix": "yarn build && eslint --fix lib .prettierrc.js eslint.config.js"
   },
