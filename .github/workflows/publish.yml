@@ -20,7 +20,4 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
   type-check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: kellenff/strictish/.github/workflows/type-check.yml@main
+    uses: kellenff/strictish/.github/workflows/type-check.yml@main
