@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/workflows/type-check.yml@${{ github.head_ref }}
+      - uses: ./.github/workflows/type-check.yml@main
   lint:
     runs-on: ubuntu-latest
     permissions:
