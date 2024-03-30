@@ -1,6 +1,6 @@
 {
   "name": "@fromo/strictish",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "(Unlicense OR MIT)",
   "packageManager": "yarn@4.1.1",
   "main": "./dist/index.js",
@@ -12,7 +12,6 @@
   "scripts": {
     "tchk": "tsc --noEmit",
     "build": "tsup",
-    "prepublish": "yarn build",
     "lint": "yarn build && eslint lib .prettierrc.js eslint.config.js",
     "fix": "yarn build && eslint --fix lib .prettierrc.js eslint.config.js"
   },
