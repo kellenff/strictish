@@ -1,0 +1,14 @@
+name: "Type Check"
+on: workflow_call
+jobs:
+  type-check:
+    name: "Type Check"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+      - name: Yarn Install
+        run: yarn install --frozen-lockfile
+      - uses: andoshin11/typescript-error-reporter-action@v1.0.2
