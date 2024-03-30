@@ -10,6 +10,7 @@
     "dist"
   ],
   "scripts": {
+    "tchk": "tsc --noEmit",
     "build": "tsup",
     "prepublish": "yarn build",
     "lint": "yarn build && eslint lib .prettierrc.js eslint.config.js",
