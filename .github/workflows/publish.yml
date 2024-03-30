@@ -13,6 +13,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "20"
+      - run: |
+          corepack enable
+          yarn set version 4.1.1
       - name: Yarn Install
         run: yarn install --frozen-lockfile
       - name: NPM Publish
