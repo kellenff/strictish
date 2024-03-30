@@ -21,6 +21,7 @@ jobs:
       - name: NPM Publish
         uses: JS-DevTools/npm-publish@v3
         with:
+          access: public
           token: ${{ secrets.NPM_TOKEN }}
   type-check:
     uses: kellenff/strictish/.github/workflows/type-check.yml@main
