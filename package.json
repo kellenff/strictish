@@ -15,8 +15,9 @@
     "lint": "yarn build && eslint lib .prettierrc.js eslint.config.js",
     "fix": "yarn build && eslint --fix lib .prettierrc.js eslint.config.js"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@eslint/js": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
     "espree": "^10.0.1",
     "prettier": "^3.2.5",
@@ -26,6 +27,7 @@
     "typescript-eslint": "^7.4.0"
   },
   "devDependencies": {
+    "@eslint/js": "^8.57.0",
     "@types/eslint": "^8.56.6",
     "@types/eslint__js": "^8.42.3",
     "@types/ramda": "^0.29.11",
@@ -33,7 +35,10 @@
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
+    "espree": "^10.0.1",
     "globals": "^15.0.0",
+    "prettier": "^3.2.5",
+    "ramda": "^0.29.1",
     "tsup": "^8.0.2",
     "typescript": "^5.4.3"
   }
