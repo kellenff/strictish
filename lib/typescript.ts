@@ -51,7 +51,7 @@ export const rules: ConfigWithExtends["rules"] = {
       format: ["strictCamelCase", "UPPER_CASE"],
     },
     {
-      selector: "variable",
+      selector: ["parameter", "variable"],
       format: ["strictCamelCase"],
       modifiers: ["unused"],
       leadingUnderscore: "require",
