@@ -88,6 +88,8 @@ export const rules: ConfigWithExtends["rules"] = {
   "no-return-await": "off",
   "@typescript-eslint/return-await": "error",
   "@typescript-eslint/strict-boolean-expressions": "error",
+  // Conflicts with strict-boolean-expressions
+  "no-extra-boolean-cast": "off",
   "@typescript-eslint/switch-exhaustiveness-check": "error",
   // Turn off rules that cause a lot of false positives
   "@typescript-eslint/no-unsafe-assignment": "off",
