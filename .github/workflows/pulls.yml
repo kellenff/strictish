@@ -20,7 +20,7 @@ jobs:
       - run: |
           corepack enable
       - name: Yarn Install
-        run: yarn install --immutable --immutable-cache
+        run: yarn install --immutable
       - run: yarn build
       - uses: reviewdog/action-eslint@v1
         with:
