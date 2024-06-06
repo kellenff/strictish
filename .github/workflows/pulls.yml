@@ -19,9 +19,8 @@ jobs:
           node-version: "20"
       - run: |
           corepack enable
-          yarn set version 4.1.1
       - name: Yarn Install
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable --immutable-cache
       - run: yarn build
       - uses: reviewdog/action-eslint@v1
         with:
